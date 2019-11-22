@@ -1,39 +1,9 @@
-# Brutto-Netto Gehaltsrechner
+# brutto-netto API
 
-Node.js-Programm zum Abrufen einer Spanne von Gehältern von 
-https://www.brutto-netto-rechner.info/. Ein Beispiel befindet sich unter [EXAMPLE.md](EXAMPLE.md).
+This is based on the code from 03l54rd1n3. It is an updated version which receives an input parameter for the brutto yearly value and calculates the netto value based on brutto-netto-rechner.info.
 
-Beim Aufruf von ```index.js``` erstellt das Programm eine CSV-Datei.
+see [this repo](https://github.com/03l54rd1n3/brutto-netto) for usage. You need to define the request properties in code, yet you can execute the script by using node from a command line, making sure you pass the brutto-yearly-income as parameter.
 
-Zum ändern des Gehaltsbereichs muss in ```index.js```:
-
-``` Javascript
-const bereich = [30000, 120000];
 ```
-
-angepasst werden.
-
-Zur Anpassung der weiteren Formwerte (geldwerter Vorteil, Alter, Bundesland, etc.) müssen die Formdaten angepasst werden:
-
-``` json
-    form: {
-        "f_bruttolohn": bJahr,
-        "f_abrechnungszeitraum": "jahr",
-        "f_geld_werter_vorteil": 0,
-        "f_abrechnungsjahr": 2018,
-        "f_steuerfreibetrag": 0,
-        "f_steuerklasse": 1,
-        "f_kirche": "nein",
-        "f_bundesland": "nordrhein-westfalen",
-        "f_alter": 20,
-        "f_kinder": "nein",
-        "f_kinderfreibetrag": 0,
-        "f_krankenversicherung": "pflichtversichert",
-        "f_private_kv": "",
-        "f_arbeitgeberzuschuss_pkv": "ja",
-        "f_KVZ": 1.1,
-        "f_rentenversicherung": "pflichtversichert",
-        "f_arbeitslosenversicherung": "pflichtversichert",
-        "ok": 1
-    }
+node .\index.js 40000
 ```
